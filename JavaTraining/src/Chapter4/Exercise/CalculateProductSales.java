@@ -15,6 +15,7 @@ public class CalculateProductSales {
         final double APPLE_PRICE = 3.59;
         Scanner sc = new Scanner(System.in);
 
+
         //Using a while loop
 //        System.out.print("1 - Orange = R5.00 " +
 //                "\n2 - Mango = R4.50 " +
