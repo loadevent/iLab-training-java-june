@@ -8,17 +8,31 @@ public class StudentRunner {
         int testMark;
         String stName;
         String grade, results;
+        Student[] students = new Student[3];//Array to store 3 student objects
 
         try {
-            System.out.print("Enter Student name: ");
-            stName = sc.nextLine();//Kabelo
-            System.out.print("Enter Test Mark for " + stName + ": ");
-            testMark = sc.nextInt();
-                            //        Kabelo
-            Student st = new Student(stName,testMark);
-            //st.setStName("La");
 
-            System.out.println(st.toString());
+            for (int i = 0; i < students.length; i++) {
+                System.out.println("\nDetails for student " + (i + 1) + ": ");
+                System.out.print("Enter Student name: ");
+                stName = sc.next();
+                System.out.print("Enter Test Mark for " + stName + ": ");
+                testMark = sc.nextInt();
+
+                Student st = new Student(stName,testMark);
+                students[i] = st;
+
+            }
+            //array count = 3
+            //st.setStName("La");
+//            for (int i = 0; i < students.length; i++) {
+//                System.out.println(students[i].toString());
+//            }
+
+            for (Student st : students){
+                System.out.println(st.toString());
+            }
+
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

@@ -82,10 +82,12 @@ public class Student implements IStudent {
 
         String output = null;
         try {
-            output = "Student Name: " + this.stName + "\n" +
+            output = "\nDetails for [" + this.stName + "] \n" +
+                    "Student Name: " + this.stName + "\n" +
                     "Test Mark: " + this.testMark + "\n" +
                     "Grade: " + this.getGrade() + "\n" +
-                    "Results: " + this.geResults();
+                    "Results: " + this.geResults() + "\n" +
+                    "---------------------------------------";
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
